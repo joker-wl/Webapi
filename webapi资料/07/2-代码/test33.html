@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    button{
+
+    }
+    div{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <button style="background: red;">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <div style="display: block;">1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+    // 选择元素
+    var aBtn = document.querySelectorAll('button');
+    var aDiv = document.querySelectorAll('div');
+    // 绑定事件
+    var iNow = 0;
+    for(var i = 0; i < aBtn.length; i ++) {
+        // aBtn[i].index = i;
+        // aBtn[i].setAttribute('index', i);
+        aBtn[i].onclick = function() {
+            // 先把之前的按钮清空
+            aBtn[iNow].style.background = '';
+            aDiv[iNow].style.display = 'none';
+            // 再激活自己的
+            this.style.background = 'red';
+            aDiv[this.index].style.display = 'block';
+            // 把自己的索引给上一个
+            iNow = this.index;
+        };
+    }
+    </script>
+</body>
+</html>

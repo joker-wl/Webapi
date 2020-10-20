@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>清除</button>
+    <img src="images/ad.jpg" alt="" class="ad">
+    <script>
+        var ad = document.querySelector('.ad');
+        var timer = setTimeout(function() {
+            ad.style.display = 'none';
+        }, 2000);
+
+        var oBtn = document.querySelector('button');
+        oBtn.onclick = function() {
+            clearTimeout(timer);
+            timer = null;
+        };
+    </script>
+</body>
+
+</html>
