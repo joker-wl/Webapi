@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <ul>
+        <li>aaaa</li>
+        <li>aaaa</li>
+        <li>aaaa</li>
+        <li>aaaa</li>
+        <li>aaaa</li>
+    </ul>
+    <ol>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>bbb</li>
+    </ol>
     <script>
-        var num ='';
-        for (var i = 1; i <= 9 ; i++) {
-            for (var j = 1; j <= i; j++) {
-                // 1x1= 1
-              num +=  j + 'x' + i + '=' + (i*j)
-            }
-            num+= '\n\n'
-        }
-        console.log(num);
-    </script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[0]);
+        for (var i = 0 ; i <= lis.length; i++) {
+            console.log(lis[i]);
+        }  
+       
+</script>
 </body>
+
 </html>
