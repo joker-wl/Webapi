@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #oul{
+            width: 200px;
+            border: 1px solid red;
+        }
+        li {
+            list-style: none;
+        }
+        #oul ul {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="oul">
+        <li>
+            <h3>微博</h3>
+            <ul>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">私信</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var web = document.querySelector('#oul > li');
+        console.log(web);
+        var dd = document.querySelector('#oul ul');
+        web.onmouseover = function () {
+            dd.style.display = 'block'
+        }
+        web.onmouseout = function () {
+            dd.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

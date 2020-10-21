@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/s.gif" alt="">
+    <div>上午好</div>
+    <script>
+        var img = document.querySelector('img');
+        var Odiv = document.querySelector('div');
+        var data = new Date();
+         var h = data.getHours();
+        if (h < 12) {
+            Odiv.innerHTML = '上午好';
+            img.src = 'images/s.gif';
+        }else if ( h < 18) {
+            Odiv.innerHTML = '下午好';
+            img.src = 'images/x.gif';
+        }else {
+            Odiv.innerHTML = '晚上好';
+            img.src = 'images/w.gif';
+        }
+    </script>
+</body>
+
+</html>

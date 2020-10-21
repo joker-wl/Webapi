@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #sbox {
+           
+            background-color: #cd1c1c;
+        }
+
+        #box {
+            height: 80px;
+            position: relative;
+        }
+
+        #jd {
+            display: block;
+            width: 100%;
+            height: 80px;
+            background: url(images/luzhou.jpg) no-repeat 50% 0;
+        }
+
+        #gb {
+            cursor: pointer;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: url(images/close.jpg);
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sbox">
+        <div id="box">
+            <a href="#" id="jd"></a>
+            <i id="gb"></i>
+        </div>
+    </div>
+    <script>
+        var close = document.querySelector('#gb');
+        var Sbox = document.querySelector('#sbox');
+        close.onclick = function () {
+            Sbox.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
